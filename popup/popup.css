@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+body {
+  --main-green: #14f789;
+  --secondary-green: #0fd173;
+  --last-green: #05a357;
+  --primary-dark: #0a0e12;
+  --secondary-dark: #10171c;
+  --outline: #47576350;
+  width: 300px;
+  height: 450px;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 1rem;
+  padding-top: 4rem;
+}
+
+a {
+  color: var(--main-green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: var(--secondary-green);
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 99999999999999999999999;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.05rem;
+}
+
+.navbar a.main-title-logo {
+  font-weight: bold;
+}
+
+button {
+  font-family: "Space Grotesk", sans-serif;
+  border: 0.1rem solid var(--last-green);
+  padding: 0.5rem;
+  margin: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  outline: 0px;
+  border: 0px;
+  background-color: var(--secondary-green);
+  border-radius: 0.3rem;
+  width: calc(100% - .6rem);
+}
+
+button:hover {
+  background-color: var(--last-green);
+}
+
+.post {
+  background-color: var(--secondary-dark);
+  border-radius: 0.5rem;
+  border: 3px solid var(--outline);
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  width: calc(100% - 1.75rem);
+}
+
+.message a,
+.admin-message a {
+  color: var(--main-green);
+}
+
+.message a:hover,
+.admin-message a:hover {
+  text-decoration: underline;
+}
+
+.message,
+.admin-message {
+  text-align: center;
+}
