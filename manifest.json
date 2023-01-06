@@ -9,7 +9,7 @@
   "background": {
     "service_worker": "/background.js"
   },
-  "permissions": ["scripting", "storage", "alarms"],
+  "permissions": ["scripting", "storage", "alarms", "notifications"],
   "action": {
     "default_icon": "/icons/icon48.png",
     "default_popup": "/popup.html",
