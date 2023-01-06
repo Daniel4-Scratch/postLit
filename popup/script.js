@@ -1,3 +1,16 @@
+/* version number */
+const versionName = chrome.runtime.getManifest().version_name
+document.querySelector(".version").textContent = "v" + versionName
+const version = chrome.runtime.getManifest().version
+if (versionName === version) {
+  document.querySelector(".version").classList.add("clickable-version")
+  document.querySelector(".version").addEventListener("click", function() {
+    chrome.tabs.create({
+      url: `https://github.com/STForScratch/ScratchTools/releases/tag/v${version}`
+    })
+  })
+}
+
 /* Dynamic Styling */
 
 const dynamicTheme = async function () {

@@ -194,3 +194,11 @@ button:hover {
       transform: rotate(1300deg);
     }
   }
+
+.clickable-version {
+    cursor: pointer;
+}
+
+.clickable-version:hover {
+    text-decoration: underline;
+}
