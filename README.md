@@ -10,6 +10,8 @@ postLit extension allows you to view your most recent messages for [postLit](htt
 - Mark messages as read
 - Match the theme of your postLit preset
 - Open the postLit message page in a new tab
+- Displays the number of unread messages on icon
+- Notifications when you receive a new message
 
 ## Planned Features
 - DM users directly from the extension (when postLit supports this)
