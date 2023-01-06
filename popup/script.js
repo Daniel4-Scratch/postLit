@@ -1,13 +1,7 @@
 const checkIfSignedIn = async function () {
-  const response = await fetch("https://www.postlit.dev/messages/");
-  const data = await response.text();
-  const element = document.createElement("html");
-  element.innerHTML = data.replace("<!DOCTYPE html>", "");
-  if (element.querySelector(".messages")) {
-    return true;
-  } else {
-    return false;
-  }
+  const response = await fetch("https://www.postlit.dev/me/");
+  const data = await response.json();
+  return !data.error;
 };
 
 const createPopupButtons = async function () {

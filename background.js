@@ -1,7 +1,7 @@
 const checkIfSignedIn = async function () {
-  const response = await fetch("https://www.postlit.dev/messages/");
-  const data = await response.text();
-  return data.includes('class="messages"');
+  const response = await fetch("https://www.postlit.dev/me/");
+  const data = await response.json();
+  return !data.error;
 };
 
 const setMessageCount = async function () {
