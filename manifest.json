@@ -1,0 +1,24 @@
+{
+  "name": "postLit",
+  "short_name": "postLit",
+  "manifest_version": 3,
+  "version": "0.1.0",
+  "version_name": "0.1.0-alpha",
+  "description": "Intergrates postLit with your browser!",
+  "author": "daniel4-scratch",
+  "background": {
+    "service_worker": "/background.js"
+  },
+  "permissions": ["scripting", "storage", "alarms"],
+  "action": {
+    "default_icon": "/icons/icon48.png",
+    "default_popup": "/popup.html",
+    "default_title": "postLit"
+  },
+  "icons": {
+    "16": "/icons/icon16.png",
+    "48": "/icons/icon48.png",
+    "128": "/icons/icon128.png"
+  },
+  "host_permissions": ["https://postlit.dev/*"]
+}
