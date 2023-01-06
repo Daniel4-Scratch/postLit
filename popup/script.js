@@ -1,9 +1,36 @@
+/* Dynamic Styling */
+
+const dynamicTheme = async function () {
+  const response = await fetch("https://www.postlit.dev/me/");
+  const data = await response.json();
+  const theme = data.theme;
+  if (theme == "green"){
+    document.body.classList.add("")
+  }else if(theme == "blue"){
+    document.body.classList.add("blue")
+  }else if(theme == "red"){
+    document.body.classList.add("red")
+  }else if(theme == "pink"){
+    document.body.classList.add("pink")
+  }else if(theme == "cyan"){
+    document.body.classList.add("cyan")
+  }else if(theme == "yellow"){
+    document.body.classList.add("yellow")
+  }else if(theme == "orange"){
+    document.body.classList.add("orange")
+  }
+};
+
+dynamicTheme();
+
+/* Check if signed in */
 const checkIfSignedIn = async function () {
   const response = await fetch("https://www.postlit.dev/me/");
   const data = await response.json();
   return !data.error;
 };
 
+/* Create popup buttons */
 const createPopupButtons = async function () {
   const extensionURL = chrome.runtime.getURL("")
   const isSignedIn = await checkIfSignedIn();
@@ -48,9 +75,12 @@ const createPopupButtons = async function () {
     });
     document.querySelector(".navbar").after(button);
   }
+  document.getElementById('loader-wrapper').style = "transition: opacity 0.3s ease-in-out; opacity: 0;";
+  setTimeout(function(){document.getElementById('loader-wrapper').style = "display:none;";}, 300)
 };
 createPopupButtons();
 
+/* Mark as read */
 const markAsRead = async function() {
   var response = await fetch("https://www.postlit.dev/markasread/", {
     method: "POST",

@@ -11,6 +11,65 @@ body {
   height: 450px;
 }
 
+body.red {
+  --main-green: #f76060;
+  --secondary-green: #f73939;
+  --last-green: #a82222;
+}
+
+body.yellow {
+  --main-green: #e0f760;
+  --secondary-green: #f7ed39;
+  --last-green: #a4a822;
+}
+
+body.yellow .navbar a {
+  color: black;
+}
+
+body.yellow button,
+body.yellow select {
+  color: black;
+}
+
+body.cyan .navbar a {
+  color: black;
+}
+
+body.cyan button,
+body.cyan select {
+  color: black;
+}
+
+body.cyan .bell,
+body.yellow .bell {
+  filter: invert(1);
+}
+
+body.blue {
+  --main-green: #608df7;
+  --secondary-green: #397ff7;
+  --last-green: #225ca8;
+}
+
+body.pink {
+  --main-green: #e860f7;
+  --secondary-green: #e139f7;
+  --last-green: #9622a8;
+}
+
+body.cyan {
+  --main-green: #60f4f7;
+  --secondary-green: #39f7ea;
+  --last-green: #22a89d;
+}
+
+body.orange {
+  --main-green: #f7a65f;
+  --secondary-green: #f7933b;
+  --last-green: #a96223;
+}
+
 body {
   font-family: "Space Grotesk", sans-serif;
   background-color: var(--primary-dark);
@@ -38,7 +97,8 @@ a:hover {
   width: 100vw;
   padding-left: 1rem;
   padding-right: 1rem;
-  z-index: 99999999999999999999999;
+  z-index: 10;
+  box-sizing: border-box;
 }
 
 .navbar a {
@@ -94,3 +154,43 @@ button:hover {
 .admin-message {
   text-align: center;
 }
+
+/*Loader*/
+#loader-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--primary-dark);
+  z-index: 11;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  }
+  #loader-wrapper::before{
+  content: "";
+  display: block;
+  -webkit-box-flex: 0.5;
+  box-flex: 0.5;
+  -webkit-flex-grow: 0.5;
+  flex-grow: 0.5;
+  height: 0px;
+  }
+  #loader{
+  text-align:center;
+  }
+  #loader img{
+  height:30px;
+  width:30px;
+  animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(1300deg);
+    }
+  }

@@ -3,7 +3,7 @@
   "short_name": "postLit",
   "manifest_version": 3,
   "version": "0.1.0",
-  "version_name": "0.1.0-alpha",
+  "version_name": "0.1.0-beta",
   "description": "Intergrates postLit with your browser!",
   "author": "daniel4-scratch",
   "background": {

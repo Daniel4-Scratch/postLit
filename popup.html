@@ -5,17 +5,26 @@
     <title>postLit.extension</title>
     <link rel="stylesheet" href="popup/popup.css">
 </head>
-<body>
+<body scroll="no" style="overflow: hidden;">
+    <div id="loader-wrapper">
+        <div id="loader"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHhSURBVHgB7Zq/SgMxHMe/iVZFRJ1cvSfQOooI3hPYR3EWxCuCXe3g5ugD9A0qFBHU4VrcbRUUdbHgUL32Yn7XlpbioLloGskHQnJc2vt98/uTgwvDCAeisiW7HAfblr2HMUAAIZMtQpQPmF8fvsf6g0CUF6eQ2ZeTdzDGSIOPPrpCXnvXXeMzyJTlMAs7IG/4JILTFa087DGeyPZsBiuIshcjcwsLiSF83sFEAHvJcQa+CkuhSkk5YFPsj+JxWI4TYBonwDROgGmcANM4AaZxAkzjBJjGCTCNE2Aa6wVMQoFdbOA3OMQ5foqSB5p4h26aaEEFJQFPeINuVBdFScCdfJxuaniGCkoCaniR69WGThqKi6IkoCWNv8QDdFHB/d+GEHGFRy3JTMlbkUGpirIA8sIpblKJIOPpP9KQaiPrG6AiIs1vh0m9E5Mhx7hO4vg7UPLT3BNUtYSg0k78FRTHVAqXMY8VLGEBM7JNJ/fIUNo7qPxWNVcwbQII8kYtaWo1XYX/8DYqGrCXkDxQgrWwkMcWC4jA83yPbZ7JMCrCOkQxYOv1JIkjtAPZhbAGFkaYC2iUCKAzB3T2wA5PiGKEWT9ga4PDHsMUxIXXQSeQE7MMbEw+gotGDC5zNS51Q37AJ31CoxS7ZL4PAAAAAElFTkSuQmCC"></div>
+    </div>
     <div class="navbar">
         <a class="main-title-logo"> postLit (the extension) </a>
+        <a style="
+    float: right;
+    margin-top: 6px;
+    font-size: 10px;
+    color: rgb(255, 255, 255, 0.7);
+">v0.1.0</a>
     </div>
-    <div class="messages-box" style="display: none;">
-    <h1>messages</h1>
-    <button class="mark-as-read">mark as read</button>
-    <div class="messages">
-
+    <div class="content" id="content">
+        <div class="messages-box" id="msgbox" style="display: none;">
+            <h1>messages</h1>
+            <button class="mark-as-read">mark as read</button>
+            <div class="messages"></div>
+        </div>
     </div>
-</div>
 </body>
 <script src="popup/script.js"></script>
 </html>
