@@ -6,7 +6,7 @@ if (versionName === version) {
   document.querySelector(".version").classList.add("clickable-version")
   document.querySelector(".version").addEventListener("click", function() {
     chrome.tabs.create({
-      url: `https://github.com/daniel4-scratch/postlit/releases/tag/v${version}`
+      url: `https://github.com/postlit/extension/releases/tag/v${version}`
     })
   })
 }
